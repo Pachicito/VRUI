@@ -26,7 +26,7 @@ class LambdaDemo extends Component {
         <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Figma"}</button>
         <br />
         <span>{msg}</span>
-        <img src={{uri:this.state.imgURL}} alt="Figma Mirror"/>
+        <img src={this.state.imgURL} alt="Figma Mirror"/>
       </p>
     )
   }
