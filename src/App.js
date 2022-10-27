@@ -12,7 +12,7 @@ class LambdaDemo extends Component {
     e.preventDefault()
 
     this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
+    fetch("https://api.figma.com/v1/files/fkEZhLwbfw47dSnibASSFE")
       .then(response => response.json())
       .then(json => this.setState({ loading: false, msg: json.msg }))
   }
