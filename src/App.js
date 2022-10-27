@@ -5,7 +5,7 @@ import "./App.css"
 class LambdaDemo extends Component {
   constructor(props) {
     super(props)
-    this.state = { loading: false, msg: null }
+    this.state = { loading: false, msg: null , imgURL: null, imgWidth: null, imgHeight: null}
   }
 
   handleClick = api => e => {
@@ -22,10 +22,10 @@ class LambdaDemo extends Component {
 
     return (
       <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
+        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Figma"}</button>
         <br />
         <span>{msg}</span>
+        <Image src={{uri:imgURL}} />
       </p>
     )
   }
