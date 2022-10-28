@@ -32,7 +32,7 @@ class LambdaDemo extends Component {
                 .then(res => res.images[node.id])
                 .then(res => console.log(res))
     )))
-    .then(res => this.setState({ loading: false, msg: 'Hello', imgURL: res })
+    .then(res => this.setState({ loading: false, msg: 'Hello', imgURL: res }))
       
   }
 
