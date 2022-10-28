@@ -41,7 +41,10 @@ class LambdaDemo extends Component {
   
   handleClick2 = api => e => {
       e.preventDefault()
-      fetch('https://www.figma.com/oauth?client_id=BXgYpR6C3KvHeTZKYGYjHb&mode=no-cors&redirect_uri=https://vrui.app/&scope=file_read&state=poop&response_type=code'
+      fetch('https://www.figma.com/oauth?client_id=BXgYpR6C3KvHeTZKYGYjHb&redirect_uri=https://vrui.app/&scope=file_read&state=poop&response_type=code',
+            {
+        mode: 'no-cors'
+      }
       )
   }
 
