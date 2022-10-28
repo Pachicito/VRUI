@@ -32,7 +32,7 @@ class LambdaDemo extends Component {
                 .then(res => res.images[node.id])
                 .then(res => console.log(res))
     )))
-    .then(res => this.setState({ loading: false, msg: 'Hello', imgURL: res.toString() }))
+    .then(res => this.setState({ loading: false, msg: 'Hello', imgURL: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e7e3b0d6-6090-4212-936d-f4995d8f55e7' }))
       
   }
 
