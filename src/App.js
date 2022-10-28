@@ -16,8 +16,8 @@ class LambdaDemo extends Component {
       headers: {'X-FIGMA-TOKEN': 'figd_xQfn3nIwieZctQtIvmHNP8lMCAVvQ0EtGDR4Zu_y'}})
       .then(response => response.json())
       .then(json => {
-        console.log(json)
-        this.setState({ loading: false, msg: json })
+        console.log(json.text())
+        this.setState({ loading: false, msg: json.text() })
       })
       
   }
