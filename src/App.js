@@ -19,14 +19,14 @@ class LambdaDemo extends Component {
   }
 
   render() {
-    const { loading, msg } = this.state
+    const { loading, msg, imgURL } = this.state
 
     return (
       <p>
         <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Figma"}</button>
         <br />
-        <span>{this.state.msg}</span>
-        <img src={this.state.imgURL} alt="Figma Mirror"/>
+        <span>{msg}</span>
+        <img src={imgURL} alt="Figma Mirror"/>
       </p>
     )
   }
