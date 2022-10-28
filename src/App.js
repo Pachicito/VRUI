@@ -24,6 +24,14 @@ class LambdaDemo extends Component {
         })),
         ...child
     })))
+    .then(items => items.map(({page, nodes}) => 
+      nodes.map(node =>
+                fetch('https://api.figma.com/v1/images/fkEZhLwbfw47dSnibASSFE?ids=${node.id}', {
+                  headers: {'X-FIGMA-TOKEN': 'figd_xQfn3nIwieZctQtIvmHNP8lMCAVvQ0EtGDR4Zu_y'}})
+                .then(res => res.json())
+                .then(res => res.images[node.id])
+                .then(res => console.log(res.text()))
+    )))
     .then(poop => console.log(poop));
         //console.log(response.json().document)
         //this.setState({ loading: false, msg: response.text() })
