@@ -32,9 +32,7 @@ class LambdaDemo extends Component {
                 .then(res => res.images[node.id])
                 .then(res => console.log(res))
     )))
-    .then(poop => console.log(poop));
-        //console.log(response.json().document)
-        //this.setState({ loading: false, msg: response.text() })
+    .then(res => this.setState({ loading: false, msg: "Hello, World!", imgURL: res })
       
   }
 
