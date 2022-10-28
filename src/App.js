@@ -24,7 +24,7 @@ class LambdaDemo extends Component {
         })),
         ...child
     })))
-    .then(console.log("poop"));
+    .then(poop => console.log(poop));
         //console.log(response.json().document)
         //this.setState({ loading: false, msg: response.text() })
       
