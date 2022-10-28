@@ -30,7 +30,7 @@ class LambdaDemo extends Component {
                   headers: {'X-FIGMA-TOKEN': 'figd_xQfn3nIwieZctQtIvmHNP8lMCAVvQ0EtGDR4Zu_y'}})
                 .then(res => res.json())
                 .then(res => res.images[node.id])
-                .then(res => console.log(res.text()))
+                .then(res => console.log(res))
     )))
     .then(poop => console.log(poop));
         //console.log(response.json().document)
