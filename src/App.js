@@ -37,6 +37,15 @@ class LambdaDemo extends Component {
      
     )))
       
+    handleClick2 = api => e => {
+      e.preventDefault()
+      fetch('GET https://www.figma.com/oauth?
+      client_id=BXgYpR6C3KvHeTZKYGYjHb&
+      redirect_uri=https://vrui.app/&
+      scope=file_read&
+      state=poop&
+      response_type=code'
+      )
   }
 
   render() {
@@ -45,6 +54,7 @@ class LambdaDemo extends Component {
     return (
       <p>
         <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Figma"}</button>
+        <button onClick={this.handleClick2("hello")}>{loading ? "Loading..." : "Login"}</button>
         <br />
         <span>{msg}</span>
         <img src={imgURL} alt="Figma Mirror"/>
