@@ -15,7 +15,7 @@ class LambdaDemo extends Component {
     fetch('https://api.figma.com/v1/files/fkEZhLwbfw47dSnibASSFE', {
       headers: {'X-FIGMA-TOKEN': 'figd_xQfn3nIwieZctQtIvmHNP8lMCAVvQ0EtGDR4Zu_y'}})
       .then(response => {
-        console.log(response)
+        console.log(response.json())
         //this.setState({ loading: false, msg: response.text() })
       })
       
