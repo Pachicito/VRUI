@@ -12,12 +12,21 @@ class LambdaDemo extends Component {
     e.preventDefault()
 
     this.setState({ loading: true })
-    fetch('https://api.figma.com/v1/files/fkEZhLwbfw47dSnibASSFE', {
+    
+    fetch('https://api.figma.com/v1/files/fkEZhLwbfw47dSnibASSFE?depth=2', {
       headers: {'X-FIGMA-TOKEN': 'figd_xQfn3nIwieZctQtIvmHNP8lMCAVvQ0EtGDR4Zu_y'}})
-      .then(response => {
-        console.log(response.json().document)
+      .then(res => res.json())
+      .then(res => res.document.children.map((child, i) => ({
+        page: child.name,
+        nodes: child.children.map(child => ({
+          name: child.name,
+          id: child.id
+        })),
+        ...child
+    })))
+    .then(console.log("poop"));
+        //console.log(response.json().document)
         //this.setState({ loading: false, msg: response.text() })
-      })
       
   }
 
