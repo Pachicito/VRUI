@@ -15,7 +15,7 @@ class LambdaDemo extends Component {
       client_id=BXgYpR6C3KvHeTZKYGYjHb&
       redirect_uri=https://vrui.app/&
       scope=file_read&
-      state=:state&
+      state=poop&
       response_type=code'
       )
       
