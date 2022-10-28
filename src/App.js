@@ -41,6 +41,7 @@ class LambdaDemo extends Component {
       e.preventDefault()
       fetch('GET https://www.figma.com/oauth?client_id=BXgYpR6C3KvHeTZKYGYjHb&redirect_uri=https://vrui.app/&scope=file_read&state=poop&response_type=code'
       )
+    }
   }
 
   render() {
