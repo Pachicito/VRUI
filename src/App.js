@@ -26,7 +26,7 @@ class LambdaDemo extends Component {
     })))
     .then(items => items.map(({page, nodes}) => 
       nodes.map(node =>
-                fetch('https://api.figma.com/v1/images/fkEZhLwbfw47dSnibASSFE?ids=${node.id}', {
+                fetch(`https://api.figma.com/v1/images/fkEZhLwbfw47dSnibASSFE?ids=${node.id}`, {
                   headers: {'X-FIGMA-TOKEN': 'figd_xQfn3nIwieZctQtIvmHNP8lMCAVvQ0EtGDR4Zu_y'}})
                 .then(res => res.json())
                 .then(res => res.images[node.id])
