@@ -15,7 +15,7 @@ class LambdaDemo extends Component {
     fetch('https://api.figma.com/v1/files/fkEZhLwbfw47dSnibASSFE?depth=2', {
       headers: {'X-FIGMA-TOKEN': 'figd_xQfn3nIwieZctQtIvmHNP8lMCAVvQ0EtGDR4Zu_y'}})
       .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.document.children.children.children.id.stringify() }))
+      .then(json => this.setState({ loading: false, msg: json.document.stringify() }))
   }
 
   render() {
@@ -25,7 +25,7 @@ class LambdaDemo extends Component {
       <p>
         <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Figma"}</button>
         <br />
-        <span>{msg}</span>
+        <span>{this.state.msg}</span>
         <img src={this.state.imgURL} alt="Figma Mirror"/>
       </p>
     )
